@@ -140,18 +140,18 @@ void setUserView( ){
   glLoadIdentity( );
   /* gluLookAt( 0.0,0.0,distance,0.0,0.0,0.0,0.0,1.0,0.0 ); */
 
-  //GLdouble theta = angle2 * PI / 180;
-  //GLdouble phi = angle * PI / 180;
+  GLdouble theta = angle2 * PI / 180;
+  GLdouble phi = angle * PI / 180;
 
-  //GLfloat eyeX = zdistance * cos(theta) * sin(phi);
-  //GLfloat eyeY = zdistance * sin(theta) * sin(phi);
-  //GLfloat eyeZ = zdistance * cos(phi);
+  GLfloat eyeX = zdistance * cos(theta) * sin(phi);
+  GLfloat eyeY = zdistance * sin(theta) * sin(phi);
+  GLfloat eyeZ = zdistance * cos(phi);
 
 
-  //gluLookAt(eyeX, eyeY, eyeZ,0.0,0.0,0.0,0.0,1.0,0.0 ); 
+  gluLookAt(eyeX, eyeY, eyeZ,0.0,0.0,0.0,0.0,1.0,0.0 ); 
 
-  glTranslatef( -xdistance, ydistance, -zdistance );
-  glRotatef( angle2, 1.0, 0.0, 0.0 );
-  glRotatef( angle, 0.0, 1.0, 0.0 );
+  //glTranslatef( -xdistance, ydistance, -zdistance );
+  //glRotatef( angle2, 1.0, 0.0, 0.0 );
+  //glRotatef( angle, 0.0, 1.0, 0.0 );
 }
 
