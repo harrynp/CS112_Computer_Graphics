@@ -1,0 +1,21 @@
+#version 330
+uniform mat4 viewMatrix, projMatrix;
+
+
+uniform sampler2D myTextureSampler;
+
+in vec3 Color;
+in vec3 Normal;
+in vec4 Position;
+
+in vec2 UV;
+
+out vec4 outputF;
+ 
+void main()
+{
+	//Texture
+	vec3 tex = texture(myTextureSampler, UV).rgb;
+
+	outputF = vec4(Color,1);
+}
